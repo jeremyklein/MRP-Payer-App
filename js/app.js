@@ -19,6 +19,7 @@ function displayPatient (pt) {
 }
 
 FHIR.oauth2.ready(function(smart){
+    console.log(smart);
     smart.patient.read().then(function(pt) {
         displayPatient (pt);
     });
